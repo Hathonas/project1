@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Item List</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th>Operation</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr data-th-each="item : ${itemList}">
+				<td th:text="${item.id}"></td>
+				<td th:text="${item.itemName}"></td>
+				<td th:text="${item.itemQuantity}"></td>
+				<td th:text="${item.itemPrice}"></td>
+				<td>delete</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
